@@ -1,9 +1,9 @@
-function fn(...c) {
-    if (!c.every((a) => Number.isNumber(a)))
+function addNumbers(...inputs) {
+    if (!inputs.every((firstVal) => Number.isNumber(firstVal)))
       throw "All arguments must be numbers.";
-    return c.reduce((a, b) => a + b);
+    return inputs.reduce((firstVal, secondVal) => firstVal + secondVal);
   }
   
-  fn(1, 2, 3); //> 6
-  fn(10, "B", 20); //> error All arguments must be numbers.
+  addNumbers(1, 2, 3); //> 6
+  addNumbers(10, "B", 20); //> error All arguments must be numbers.
   
