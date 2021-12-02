@@ -7,3 +7,5 @@ function fn(...c) {
   fn(1, 2, 3); //> 6
   fn(10, "Z", 20); //> error All arguments in this function must be a number.
   
+
+	
